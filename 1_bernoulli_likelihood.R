@@ -8,7 +8,6 @@ likelihood <- function(n,y,theta)
 theta = seq(from = 0.01, to = 0.99, by = 0.01)
 
 # plot the likelihood for sequence of thetas under a constant number of trials and wins
-x11()
 plot(x = theta, y = likelihood(400,72,theta))
 abline(v = 72/400)
 
@@ -19,11 +18,9 @@ loglike <- function(n,y,theta)
 }
 
 # plot log likelihood for sequence of thestas under a constant number of trials and wins
-x11()
 plot(x = theta, y = loglike(400,72,theta))
 abline(v = 72/400)
 
 # line plot for log likelihood 
-x11()
 plot(x = theta, y = loglike(400,72,theta), type = "l")
 abline(v = 72/400)
